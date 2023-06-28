@@ -64,8 +64,8 @@ const BlogPost = ({ params }) => {
         </div>
         {/* Dangerous Html code  */}
         <div dangerouslySetInnerHTML={{__html: blogPost.Content}}></div>
-        <p>{blogPost.Content}</p>
         {/* Dangerous Html code  */}
+        {/* <p>{blogPost.Content}</p> */}
       </div>
     </div>
             </>
