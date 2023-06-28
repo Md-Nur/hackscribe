@@ -1,17 +1,28 @@
-import React from 'react';
+import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center mb-4 md:mb-0">
-            <img className="h-8 w-8 mr-2" src="/logo.svg" alt="Logo" />
-            <h2 className="text-xl font-semibold">HackScribe</h2>
+          <div className="text-white mb-6 md:mb-0">
+            <h3 className="text-2xl font-semibold">Stay Connected</h3>
+            <p className="mt-2">Follow us on social media for updates and news.</p>
           </div>
-          <div className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} Muhammad Nur. All rights reserved.
+          <div className="flex space-x-4">
+            <a href="https://www.facebook.com/Md.Nur9211/" target="_blank" className="text-white hover:text-gray-300 transition duration-300">
+              <FaFacebook className="w-8 h-8" />
+            </a>
+            <a href="https://twitter.com/MdNur9211" target="_blank" className="text-white hover:text-gray-300 transition duration-300">
+              <FaTwitter className="w-8 h-8" />
+            </a>
+            <a href="https://www.instagram.com/md_nur_e_alam/" target="_blank" className="text-white hover:text-gray-300 transition duration-300">
+              <FaInstagram className="w-8 h-8" />
+            </a>
           </div>
+        </div>
+        <div className="mt-8 text-center text-gray-300">
+          <p>&copy; 2023 Muhammad Nur. All rights reserved.</p>
         </div>
       </div>
     </footer>

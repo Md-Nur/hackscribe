@@ -1,29 +1,3 @@
-// import Link from 'next/link';
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-blue-500 py-4">
-//       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-//         <Link href="/" lassName="text-white font-bold text-xl">Logo
-//         </Link>
-//         <div className="flex space-x-4">
-//           <Link href="/about" className="text-white hover:underline">About
-//           </Link>
-//           <Link href="/services" className="text-white hover:underline">Services
-//           </Link>
-//           <Link href="/contact" className="text-white hover:underline">Contact
-//           </Link>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-
-
-
 import { useState } from 'react';
 import Link from 'next/link';
 

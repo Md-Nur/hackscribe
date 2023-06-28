@@ -2,9 +2,6 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Client, Databases, Query } from 'appwrite';
-import Head from 'next/head';
-import Navbar from '@/app/components/Navbar';
-
 const BlogPost = ({ params }) => {
   const { slug } = params;
 
@@ -44,32 +41,33 @@ const BlogPost = ({ params }) => {
     return <div>Loading...</div>;
   }
 
+
   return (
 
     <>
-    <Head>
-      <title>{blogPost.Title}</title>
-      <meta name="description" content={blogPost.MetaDesc} />
-    </Head>
-    <Navbar />
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">{blogPost.Title}</h1>
-        <div className="relative h-80 mb-6">
-          <Image
-            src={blogPost.Image}
-            alt={blogPost.Title}
-            fill="responsive"
+      <head>
+        <title>{blogPost.Title} - Blog</title>
+        <meta name="description" content={blogPost.MetaDesc} />
+      </head>
+     
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-4xl font-bold mb-6">{blogPost.Title}</h1>
+          <div className="relative h-80 mb-6">
+            <Image
+              src={blogPost.Image}
+              alt={blogPost.Title}
+              fill="responsive"
             />
+          </div>
+          {/* Dangerous Html code  */}
+          <div dangerouslySetInnerHTML={{ __html: blogPost.Content }}></div>
+          {/* Dangerous Html code  */}
+          {/* <p>{blogPost.Content}</p> */}
         </div>
-        {/* Dangerous Html code  */}
-        <div dangerouslySetInnerHTML={{__html: blogPost.Content}}></div>
-        {/* Dangerous Html code  */}
-        {/* <p>{blogPost.Content}</p> */}
       </div>
-    </div>
-            </>
-    )
+    </>
+  )
 };
 
 export default BlogPost;
