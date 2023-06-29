@@ -31,7 +31,7 @@ const BlogForm = () => {
         e.preventDefault();
         try {
             // Title	Content	slug	Image	MetaDesc
-            let { Title, Image, Content, MetaDesc } = formData;
+            let { Title,  Content, Image, MetaDesc } = formData;
             let slug = Title.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '');
             console.log(MetaDesc);
             // Remove html tags form content to enter MetaDesc and slice it to 100 characters
