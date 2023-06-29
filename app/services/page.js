@@ -1,4 +1,5 @@
 import { FaCode, FaDesktop, FaServer } from 'react-icons/fa';
+import Projects from './project';
 
 const MyServices = () => {
     const services = [
@@ -20,6 +21,7 @@ const MyServices = () => {
     ];
 
     return (
+        <>
         <section className="bg-gray-100 py-10">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-semibold text-center mb-6">My Services</h2>
@@ -37,7 +39,10 @@ const MyServices = () => {
                     ))}
                 </div>
             </div>
+
+        <Projects />
         </section>
+        </>
     );
 };
 

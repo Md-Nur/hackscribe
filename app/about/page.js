@@ -6,18 +6,27 @@ const About = () => {
                 <h2 className="text-4xl font-semibold text-center mb-6">About Me, Muhammad Nur</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="md:order-2">
-                        <img src="https://avatars.githubusercontent.com/u/63946435?v=4" alt="About Me" className="rounded-lg shadow-lg" />
+
+                        <img src="Nur.jpg" alt="About Me" className="rounded-lg shadow-lg" />
                     </div>
                     <div>
                         <p className="text-gray-800 text-lg mb-4">
-                            Hello! I'm Muhammad Nur, a passionate web developer with a keen interest in creating intuitive and visually appealing web experiences. I specialize in front-end development and have expertise in technologies like HTML, CSS, JavaScript, and React.
+                            Hello! I'm Muhammad Nur, a passionate AI based Web application developer with a strong track record of success. I have been developing AI-powered web applications for over 5 years, and I have a deep understanding of the latest technologies in this field. I am also proficient in a variety of programming languages, including Python, PHP and JavaScript.
                         </p>
                         <p className="text-gray-800 text-lg mb-4">
-                            I love turning ideas into reality through coding. With a strong focus on user-centered design, I strive to build websites and web applications that not only look great but also provide a seamless user experience.
+                            I am a graduate of Monipur High School, where I completed my PEC, JSC, and SSC. I then went on to graduate from St. Joseph Higher Secondary School with GPA-5 in HSC. After graduating, I started my own AI-based web development company called "Code & Cognition".
                         </p>
                         <p className="text-gray-800 text-lg">
-                            When I'm not coding, you can find me exploring the latest trends in web development or diving into new technologies to enhance my skills and stay up to date with the ever-evolving tech landscape.
+                            At Code & Cognition, I have developed a wide range of AI-powered web applications for businesses of all sizes. 
                         </p>
+                        <p className="text-gray-800 text-lg">
+                            I am also a frequent speaker at industry conferences and meetups. I am passionate about sharing my knowledge and expertise with others, and I am always looking for new ways to learn and grow.</p>
+                        <p className="text-gray-800 text-lg">
+                            I am a highly motivated and results-oriented individual. I am also a team player and I am always willing to go the extra mile to get the job done. I am confident that I can make a significant contribution to any team or organization.
+
+                        </p>
+                        <p className="text-gray-800 text-lg">
+                            If you are looking for an experienced and talented AI based Web application developer, I would be honored to discuss your needs with you.</p>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@ const Navbar = () => {
           </Link>
           <Link href="/services" className="block text-white font-medium text-lg mb-4">Services
           </Link>
-          <Link href="/contact" className="block text-white font-medium text-lg">Contact
+          <Link href="/create" className="block text-white font-medium text-lg">Create
           </Link>
         </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
             <Link href="/services" className="text-white hover:underline">Services
             </Link>
-            <Link href="/contact" className="text-white hover:underline">Contact
+            <Link href="/create" className="text-white hover:underline">Create
             </Link>
           </div>
         </div>
