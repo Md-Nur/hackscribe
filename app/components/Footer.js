@@ -2,7 +2,7 @@ import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 py-10">
+    <footer className="bg-gray-900 p-10 pb-44">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="text-white mb-6 md:mb-0">
@@ -30,3 +30,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

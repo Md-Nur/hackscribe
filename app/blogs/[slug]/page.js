@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Client, Databases, Query } from 'appwrite';
+import Loading from '@/app/components/Loading';
 const BlogPost = ({ params }) => {
   const { slug } = params;
 
@@ -38,35 +38,35 @@ const BlogPost = ({ params }) => {
 
   if (!blogPost) {
     // Add your own loading state or error handling logic here
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 
+return (
+  <>
+    <head>
+      <title>{blogPost.Title} - Blog</title>
+      <meta name="description" content={blogPost.MetaDesc} />
+    </head>
 
-  return (
-
-    <>
-      <head>
-        <title>{blogPost.Title} - Blog</title>
-        <meta name="description" content={blogPost.MetaDesc} />
-      </head>
-     
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="max-w-3xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6">{blogPost.Title}</h1>
-          <div className="relative h-80 mb-6">
-            <Image
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl font-bold mb-6">{blogPost.Title}</h1>
+        <div className="relative h-80 mb-6">
+         
+            <img
               src={blogPost.Image}
               alt={blogPost.Title}
-              fill="responsive"
+              className="w-full h-full object-cover"
             />
-          </div>
-          {/* Dangerous Html code  */}
-          <div dangerouslySetInnerHTML={{ __html: blogPost.Content }}></div>
-          {/* Dangerous Html code  */}
-          {/* <p>{blogPost.Content}</p> */}
+          
         </div>
+        {/* Dangerous Html code  */}
+        <div dangerouslySetInnerHTML={{ __html: blogPost.Content }}></div>
+        {/* Dangerous Html code  */}
+        {/* <p>{blogPost.Content}</p> */}
       </div>
-    </>
+    </div>
+  </>
   )
 };
 

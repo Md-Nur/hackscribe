@@ -6,19 +6,23 @@ import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'HackScribe - Blog your coding journey',
-  description: 'Blog your coding journey with HackScribe. Share your coding journey with the world. Write about your coding journey.',
+const metadata = {
+  title: 'HackScribe - Blog your coding experience',
+  description: 'Blog your coding experience with HackScribe. Share your coding journey with the world. Write about your coding journey.',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
       <body className={inter.className}>
         <Navbar />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   )
 }
