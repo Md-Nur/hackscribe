@@ -38,7 +38,7 @@ const BlogForm = () => {
             MetaDesc = Content.replace(/(<([^>]+)>)/gi, "").slice(0, 100);
 
             // If no image is provided or image is not a url, set a default image
-            if (Image === '' || Image.type != URL) {
+            if (Image === '') {
                 Image = "https://images.unsplash.com/photo-1417733403748-83bbc7c05140?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80";
             }
             if (Content.length > 5000) {
