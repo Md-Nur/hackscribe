@@ -1,42 +1,3 @@
-// const Contact = () => {
-//     return (
-//         <section className="bg-gray-100 py-10">
-//             <div className="container mx-auto px-4">
-//                 <div className="max-w-xl mx-auto">
-//                     <h2 className="text-4xl font-semibold text-center mb-6">Contact Me</h2>
-//                     <form className="flex flex-col space-y-4">
-//                         <input
-//                             type="text"
-//                             placeholder="Your Name"
-//                             className="py-3 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
-//                         />
-//                         <input
-//                             type="email"
-//                             placeholder="Your Email"
-//                             className="py-3 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
-//                         />
-//                         <textarea
-//                             placeholder="Your Message"
-//                             className="py-3 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
-//                         ></textarea>
-//                         <button
-//                             type="submit"
-//                             className="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition duration-300"
-//                         >
-//                             Send Message
-//                         </button>
-//                     </form>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Contact;
-
-
-
-// BlogForm.js
 "use client"
 import { useState } from 'react';
 import { Client, Databases, ID } from "appwrite";
@@ -53,15 +14,6 @@ const BlogForm = () => {
         .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
         .setProject('6499e205c12da2c3c9c5') // Your project ID
         ;
-
-    // const promise = databases.createDocument('[DATABASE_ID]', '[COLLECTION_ID]', '[DOCUMENT_ID]', {});
-
-    // promise.then(function (response) {
-    //     console.log(response); // Success
-    // }, function (error) {
-    //     console.log(error); // Failure
-    // });
-    // App write doc
 
 
     const [formData, setFormData] = useState({
@@ -150,11 +102,11 @@ const BlogForm = () => {
                         <input
                             type="text"
                             name="Title"
-                            placeholder='Title'
+                            placeholder='Enter a title of your blog post'
                             required
                             value={formData.Title}
                             onChange={handleChange}
-                            className="py-3 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
+                            className="py-3 px-4 border border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
                         />
                         <label>
                             Image Url
@@ -162,25 +114,25 @@ const BlogForm = () => {
                         <input
                             type="url"
                             name="Image"
-                            placeholder='Enter a url for your image'
+                            placeholder='Enter a url of am image that goes with your blog post'
                             value={formData.Image}
                             onChange={handleChange}
-                            className="py-3 px-4 border border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
+                            className="py-3 px-4 border border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
                         />
                         <label >
                             Content:
                         </label>
                         <textarea
                             name="Content"
-                            placeholder='Create a new blog post within 5000 characters.'
+                            placeholder='Create a new blog post within 5000 characters. You can make your blog better with html tags. It will be more better using tailwind css. Suggestion make a blog using chat GPT. Prompt - "Create a blog post about (your topic) in html format with Tailwind css." Then just paste the body part in the content and title in title'
                             required
                             value={formData.Content}
                             onChange={handleChange}
-                            className="py-3 px-4 border h-full border-gray-300 rounded-md focus:outline-none focus:border-purple-500"
+                            className="py-3 px-4 border h-full border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
 
                         />
 
-                        <button type="submit" className="bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition duration-300">Submit</button>
+                        <button type="submit" className="bg-[#32445d] text-[#c8ebf5] py-3 px-6 rounded-md hover:bg-[#435977] transition duration-300">Submit</button>
                     </form>
                 </div>
             </div>

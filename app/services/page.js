@@ -25,16 +25,16 @@ const MyServices = () => {
         <section className="bg-gray-100 py-10">
             <div className="container mx-auto px-4">
                 <h2 className="text-4xl font-semibold text-center mb-6">My Services</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-[#c8ebf5] ">
                     {services.map((service, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
-                            <div className="rounded-full bg-blue-500 p-3 mb-4">
-                                <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div key={index} className="bg-[#32445d] rounded-lg shadow-md p-6 flex flex-col items-center">
+                            <div className="rounded-full bg-[#c8ebf5] p-3 mb-4">
+                                <svg className="w-8 h-8 text-[#32445d]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     {service.icon}
                                 </svg>
                             </div>
                             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-                            <p className="text-gray-600 text-center">{service.description}</p>
+                            <p className="text-[#abcfd8] text-center">{service.description}</p>
                         </div>
                     ))}
                 </div>

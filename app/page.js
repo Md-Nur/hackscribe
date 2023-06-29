@@ -60,7 +60,7 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold mb-2">{post.Title}</h3>
               <p className="text-gray-700 my-5">{post.MetaDesc} ...</p>
-              <Link href={`/blogs/${post.slug}`} className="bg-blue-500 text-white py-2 px-4 mt-4 rounded">
+              <Link href={`/blogs/${post.slug}`} className="bg-[#32445d] text-[#c8ebf5] hover:bg-[#435a7a] py-2 px-4 mt-4 rounded">
                 Read More
               </Link>
             </div>

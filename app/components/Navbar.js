@@ -10,12 +10,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sm:hidden bg-blue-500">
+      <nav className="sm:hidden bg-[#32445d]">
         <div className="flex items-center justify-between py-4 px-4 sm:px-6">
-          <Link href="/" className="text-white font-bold text-xl">HackScribe
+          <Link href="/" className="text-[#c8ebf5] font-bold text-xl">HackScribe
           </Link>
           <button
-            className="text-white focus:outline-none sm:hidden"
+            className="text-[#c8ebf5] focus:outline-none sm:hidden"
             onClick={toggleNavbar}
           >
             <svg
@@ -38,13 +38,13 @@ const Navbar = () => {
         </div>
         <div
           className={`${isOpen ? 'block' : 'hidden'
-            } sm:hidden bg-blue-700 py-4 px-6`}
+            } sm:hidden bg-[#32445d] py-4 px-6`}
         >
-          <Link href="/about" className="block text-white font-medium text-lg mb-4">About
+          <Link href="/about" className="block text-[#c8ebf5] font-medium text-lg mb-4">About
           </Link>
-          <Link href="/services" className="block text-white font-medium text-lg mb-4">Services
+          <Link href="/services" className="block text-[#c8ebf5] font-medium text-lg mb-4">Services
           </Link>
-          <Link href="/create" className="block text-white font-medium text-lg">Create
+          <Link href="/create" className="block text-[#c8ebf5] font-medium text-lg">Create
           </Link>
         </div>
 
@@ -53,16 +53,16 @@ const Navbar = () => {
       </nav>
       {/* for desktop */}
 
-      <nav className="hidden sm:flex bg-blue-500 py-4">
+      <nav className=" hidden sm:flex bg-[#32445d] py-4">
         <div className="container mx-auto px-10 flex items-center justify-between">
-          <Link href="/" className="text-white font-bold text-xl">HackScribe
+          <Link href="/" className="text-[#c8ebf5] font-bold text-xl">HackScribe
           </Link>
           <div className="flex space-x-4">
-            <Link href="/about" className="text-white hover:underline">About
+            <Link href="/about" className="text-[#c8ebf5] hover:underline">About
             </Link>
-            <Link href="/services" className="text-white hover:underline">Services
+            <Link href="/services" className="text-[#c8ebf5] hover:underline">Services
             </Link>
-            <Link href="/create" className="text-white hover:underline">Create
+            <Link href="/create" className="text-[#c8ebf5] hover:underline">Create
             </Link>
           </div>
         </div>

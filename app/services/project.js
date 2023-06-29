@@ -5,7 +5,7 @@ const ProjectCard = ({ title, url, imageUrl }) => {
             <img className="w-full" src={imageUrl} alt={title} />
             <div className="p-4">
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <button className="bg-blue-500 text-white py-2 px-4 mt-4 rounded" >
+                <button className="bg-[#32445d] text-[#c8ebf5] hover:bg-[#3e5371] py-2 px-4 mt-4 rounded" >
                     <a target="_blank" href={url}>Visit</a>
                 </button>
             </div>
