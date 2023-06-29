@@ -1,6 +1,6 @@
 # HackScribe
 
-[HackScribe](https://hackscribe.vercel.app/) is a blogging website built with Next.js, Tailwind CSS, and Appwrite Cloud. It allows users to create and share blog posts on various topics.
+[HackScribe](https://hackscribe.vercel.app/) is a blogging website built with Next.js, Tailwind CSS, and Appwrite Cloud. It allows users to create and share blog posts on coding topics.
 
 ## Features
 
