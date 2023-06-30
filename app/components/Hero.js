@@ -12,10 +12,10 @@ const Hero = () => {
                         Explore the latest articles on various coding topics
                     </p>
                     <a
-                        href="#content"
+                        href="/create"
                         className="bg-[#c8ebf5] hover:bg-[#99bbc5] text-[#32445d] font-bold py-3 px-8 rounded-full transition duration-300"
                     >
-                        View Articles
+                        Create Articles
                     </a>
                 </div>
             </div>

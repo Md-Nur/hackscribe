@@ -62,7 +62,7 @@ const Navbar = () => {
             </Link>
             <Link href="/services" className="text-[#c8ebf5] hover:underline">Services
             </Link>
-            <Link href="/create" className="text-[#c8ebf5] hover:underline">Create
+            <Link href="/contact" className="text-[#c8ebf5] hover:underline">Contact
             </Link>
           </div>
         </div>

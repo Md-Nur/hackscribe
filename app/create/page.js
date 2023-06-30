@@ -69,19 +69,19 @@ const BlogForm = () => {
                 MetaDesc,
             });
             promise.then(function (response) {
-                console.log(response); // Success
+                // console.log(response); // Success
+                setFormData({
+                    Title: '',
+                    Image: '',
+                    Content: '',
+                    MetaDesc: '',
+                });
+                alert('Blog post created successfully!');
             }, function (error) {
                 console.log(error); // Failure
             });
 
             // Reset form data
-            setFormData({
-                Title: '',
-                Image: '',
-                Content: '',
-                MetaDesc: '',
-            });
-            alert('Blog post created successfully!');
 
         } catch (error) {
             console.error('Error creating blog post:', error);
