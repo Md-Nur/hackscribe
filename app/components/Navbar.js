@@ -20,7 +20,7 @@ const Navbar = () => {
             onClick={toggleNavbar}
           >
             <svg
-              className="h-6 w-6 fill-current"
+              className="h-6 w-6 fill-secondary "
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
             >
@@ -39,7 +39,7 @@ const Navbar = () => {
         </div>
         <div
           className={`${isOpen ? 'block' : 'hidden'
-            } sm:hidden bg-primary py-4 px-6`}
+            } sm:hidden bg-primaryDark py-4 px-6`}
         >
           <Link href="/about" className="block text-secondary font-medium text-lg mb-4">About
           </Link>
