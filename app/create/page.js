@@ -1,6 +1,7 @@
 "use client"
 import { useState } from 'react';
 import { Client, Databases, ID } from "appwrite";
+import { titleFont } from '../utils/font';
 
 
 const BlogForm = () => {
@@ -93,7 +94,7 @@ const BlogForm = () => {
         <section className="bg-gray-100 py-10">
             <div className="container mx-auto px-4">
                 <div className="max-w-xl mx-auto">
-                    <h2 className="text-4xl font-semibold text-center mb-6">Create A Blog</h2>
+                    <h2 className={`text-4xl font-semibold text-center mb-6 ${titleFont.className}`}>Create A Blog</h2>
 
                     <form className="flex flex-col space-y-4 h-screen" onSubmit={handleSubmit}>
                         <label>
@@ -106,7 +107,7 @@ const BlogForm = () => {
                             required
                             value={formData.Title}
                             onChange={handleChange}
-                            className="py-3 px-4 border border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
+                            className="py-3 px-4 border border-secondary rounded-md focus:outline-none focus:border-primary"
                         />
                         <label>
                             Image Url
@@ -117,7 +118,7 @@ const BlogForm = () => {
                             placeholder='Enter a url of am image that goes with your blog post'
                             value={formData.Image}
                             onChange={handleChange}
-                            className="py-3 px-4 border border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
+                            className="py-3 px-4 border border-secondary rounded-md focus:outline-none focus:border-primary"
                         />
                         <label >
                             Content:
@@ -128,11 +129,11 @@ const BlogForm = () => {
                             required
                             value={formData.Content}
                             onChange={handleChange}
-                            className="py-3 px-4 border h-full border-[#c8ebf5] rounded-md focus:outline-none focus:border-[#32445d]"
+                            className="py-3 px-4 border h-full border-secondary rounded-md focus:outline-none focus:border-primary"
 
                         />
 
-                        <button type="submit" className="bg-[#32445d] text-[#c8ebf5] py-3 px-6 rounded-md hover:bg-[#435977] transition duration-300">Submit</button>
+                        <button type="submit" className="bg-primary text-secondary py-3 px-6 rounded-md hover:bg-primaryDark transition duration-300">Submit</button>
                     </form>
                 </div>
             </div>

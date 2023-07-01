@@ -1,9 +1,25 @@
 
 const Loading = () => {
+
+
+  let loading = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-gray-900"></div>
-    </div>
+    
+    <>
+
+      {loading.map((item) => (
+        <div className="container">
+          <div className="animate-pulse bg-gray-500 rounded-md h-40 mb-4"></div>
+          <div className="animate-pulse bg-gray-500 h-6 w-3/4 mb-2"></div>
+          <div className="animate-pulse bg-gray-500 h-4 w-2/4 mb-4"></div>
+          <div className="animate-pulse bg-gray-500 h-10 w-20"></div>
+
+        </div>
+      ))}
+
+
+    </>
+
   );
 };
 

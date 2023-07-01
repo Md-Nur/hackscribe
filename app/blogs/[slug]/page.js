@@ -1,7 +1,8 @@
 'use client'
 import { useState, useEffect } from 'react';
 import { Client, Databases, Query } from 'appwrite';
-import Loading from '@/app/components/Loading';
+import Loadingblog from '@/app/components/Loadingblog';
+import { titleFont } from '@/app/utils/font';
 const BlogPost = ({ params }) => {
   const { slug } = params;
 
@@ -38,35 +39,35 @@ const BlogPost = ({ params }) => {
 
   if (!blogPost) {
     // Add your own loading state or error handling logic here
-    return <Loading />;
+    return <Loadingblog />;
   }
 
-return (
-  <>
-    <head>
-      <title>{blogPost.Title} - Blog</title>
-      <meta name="description" content={blogPost.MetaDesc} />
-    </head>
+  return (
+    <>
+      <head>
+        <title>{blogPost.Title} - Blog</title>
+        <meta name="description" content={blogPost.MetaDesc} />
+      </head>
 
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl font-bold mb-6">{blogPost.Title}</h1>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 max-w-3xl">
+        <h1 className={`text-4xl font-bold mb-6 ${titleFont.className}`}>{blogPost.Title}</h1>
         <div className="relative h-80 mb-6">
-         
-            <img
-              src={blogPost.Image}
-              alt={blogPost.Title}
-              className="w-full h-full object-cover"
-            />
-          
+
+          <img
+            src={blogPost.Image}
+            alt={blogPost.Title}
+            className="w-full h-full object-cover"
+          />
+
         </div>
         {/* Dangerous Html code  */}
         <div dangerouslySetInnerHTML={{ __html: blogPost.Content }}></div>
         {/* Dangerous Html code  */}
         {/* <p>{blogPost.Content}</p> */}
       </div>
-    </div>
-  </>
+
+
+    </>
   )
 };
 

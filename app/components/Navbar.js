@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
+import { textFont } from '../utils/font';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,12 +11,12 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sm:hidden bg-[#32445d]">
+      <nav className="sm:hidden bg-primary">
         <div className="flex items-center justify-between py-4 px-4 sm:px-6">
-          <Link href="/" className="text-[#c8ebf5] font-bold text-xl">HackScribe
+          <Link href="/" className={`text-secondary font-bold text-xl ${textFont.className}`}>HackScribe
           </Link>
           <button
-            className="text-[#c8ebf5] focus:outline-none sm:hidden"
+            className="text-secondary focus:outline-none sm:hidden"
             onClick={toggleNavbar}
           >
             <svg
@@ -38,13 +39,13 @@ const Navbar = () => {
         </div>
         <div
           className={`${isOpen ? 'block' : 'hidden'
-            } sm:hidden bg-[#32445d] py-4 px-6`}
+            } sm:hidden bg-primary py-4 px-6`}
         >
-          <Link href="/about" className="block text-[#c8ebf5] font-medium text-lg mb-4">About
+          <Link href="/about" className="block text-secondary font-medium text-lg mb-4">About
           </Link>
-          <Link href="/services" className="block text-[#c8ebf5] font-medium text-lg mb-4">Services
+          <Link href="/services" className="block text-secondary font-medium text-lg mb-4">Services
           </Link>
-          <Link href="/create" className="block text-[#c8ebf5] font-medium text-lg">Create
+          <Link href="/create" className="block text-secondary font-medium text-lg">Create
           </Link>
         </div>
 
@@ -53,16 +54,16 @@ const Navbar = () => {
       </nav>
       {/* for desktop */}
 
-      <nav className=" hidden sm:flex bg-[#32445d] py-4">
+      <nav className=" hidden sm:flex bg-primary py-4">
         <div className="container mx-auto px-10 flex items-center justify-between">
-          <Link href="/" className="text-[#c8ebf5] font-bold text-xl">HackScribe
+          <Link href="/" className={`text-secondary font-bold text-xl ${textFont.className}`}>HackScribe
           </Link>
           <div className="flex space-x-4">
-            <Link href="/about" className="text-[#c8ebf5] hover:underline">About
+            <Link href="/about" className="text-secondary hover:underline">About
             </Link>
-            <Link href="/services" className="text-[#c8ebf5] hover:underline">Services
+            <Link href="/services" className="text-secondary hover:underline">Services
             </Link>
-            <Link href="/contact" className="text-[#c8ebf5] hover:underline">Contact
+            <Link href="/contact" className="text-secondary hover:underline">Contact
             </Link>
           </div>
         </div>

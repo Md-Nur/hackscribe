@@ -7,13 +7,12 @@ import { useState, useEffect } from "react";
 import Footer from './components/Footer';
 import Loading from './components/Loading';
 import Hero from './components/Hero';
+import { textFont } from './utils/font';
 
 const client = new Client();
 client
   .setEndpoint('https://cloud.appwrite.io/v1') // Your API Endpoint
   .setProject('6499e205c12da2c3c9c5') // Your project ID
-
-
 
 
 export default function Home() {
@@ -31,26 +30,23 @@ export default function Home() {
     );
 
     promise.then(function (response) {
-      console.log(response);
-      setblogPosts(response.documents)
+      // console.log(response);
+      setblogPosts(response.documents.reverse())
+
     }, function (error) {
       console.log(error);
     });
 
   }, [])
-  if (!blogPosts) {
-    // Add your own loading state or error handling logic here
-    return (<div>Loading...</div>
-    )
 
-  }
+
   return (
     <>
       <Hero />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <h2 className="text-2xl font-bold mb-4" id='content'>Latest Blog Posts</h2>
-        {blogPosts.length === 0 && <Loading />}
+        <h2 className={`text-2xl font-bold mb-4  ${textFont.className}`} id='content'>Latest Blog Posts</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {blogPosts.length === 0 && <Loading />}
           {blogPosts.map((post) => (
             <div key={post.id} className="bg-white p-4 shadow-md">
               <img
@@ -58,9 +54,9 @@ export default function Home() {
                 alt={post.Title}
                 className="w-full h-40 object-cover mb-4"
               />
-              <h3 className="text-xl font-bold mb-2">{post.Title}</h3>
+              <h3 className={`text-xl font-bold mb-2 ${textFont.className}`}>{post.Title}</h3>
               <p className="text-gray-700 my-5">{post.MetaDesc} ...</p>
-              <Link href={`/blogs/${post.slug}`} className="bg-[#32445d] text-[#c8ebf5] hover:bg-[#435a7a] py-2 px-4 mt-4 rounded">
+              <Link href={`/blogs/${post.slug}`} className="bg-primary text-secondary hover:bg-primaryDark py-2 px-4 mt-4 rounded">
                 Read More
               </Link>
             </div>

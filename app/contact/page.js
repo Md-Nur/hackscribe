@@ -1,8 +1,10 @@
 "use client"
 import { useState } from 'react';
 import Image from 'next/image'
+import contact from '../../public/connection.png'
 
 import { Client, Databases, ID } from "appwrite";
+import { textFont, titleFont } from '../utils/font';
 
 const client = new Client();
 
@@ -55,17 +57,17 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="bg-gray-100 min-h-screen flex items-center flex-col w-screen py-10">
-      <h2 className="mb-5 text-4xl font-bold">Contact Me</h2>
-      <div className="md:grid md:justify-items-center md:grid-cols-2 flex flex-col items-center w-screen">
+    <section className="bg-gray-100 min-h-screen flex items-center flex-col py-10">
+      <h2 className={`font-[heebo] mb-5 text-4xl font-bold ${titleFont.className}`}>Contact Me</h2>
+      <div className="flex items-center md:grid md:grid-cols-2 md:justify-items-center">
 
         <div className="hidden sm:flex sm:justify-start">
-          <Image src="/connection.png" alt="Picture of the author" width={500} height={500} />
+          <Image src={contact} alt="Picture of the author" />
         </div>
 
         <div className="flex flex-col items-center">
-          <h3 className="text-2xl font-bold m-auto">Contact Form</h3>
-          <form className="space-y-4 min-w-[80vw] md:min-w-[40vw] p-5" autoComplete='off' onSubmit={handleSubmit}>
+          <h3 className={`hidden sm:block text-2xl font-bold m-auto ${textFont.className}`}>Contact Form</h3>
+          <form className="space-y-4 p-3 sm:w-[40vw] w-[80vw]" autoComplete='off' onSubmit={handleSubmit}>
             <div>
               <label htmlFor="name" className="block mb-1 font-medium">Name</label>
               <input
@@ -73,10 +75,10 @@ const ContactForm = () => {
                 id="name"
                 name="name"
                 required
-                autoSave='false'
+                placeholder='Your Name'
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-[#c8ebf5] rounded focus:border-[#32445d]"
+                className="w-full px-4 py-2 border border-secondary rounded focus:border-primary"
               />
             </div>
             <div>
@@ -86,10 +88,10 @@ const ContactForm = () => {
                 id="email"
                 name="email"
                 required
-                autoSave='false'
+                placeholder='your_email@email.com'
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2 border border-[#c8ebf5] rounded focus:border-[#32445d]"
+                className="w-full px-4 py-2 border border-secondary rounded focus:border-primary"
               />
             </div>
             <div>
@@ -98,17 +100,17 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 required
-                autoSave='false'
+                placeholder='Give me your message. If you want to hire me, please give me your project details.'
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-2 border border-[#c8ebf5] rounded focus:border-[#32445d]"
+                className="w-full px-4 py-2 border border-secondary rounded focus:border-primary"
               ></textarea>
             </div>
             <div className='flex justify-center'>
               <button
                 type="submit"
-                className="px-6 py-2 text-[#c8ebf5] bg-[#32445d] rounded hover:bg-[#3f5472]"
+                className="px-6 py-2 text-secondary bg-primary rounded hover:bg-primaryDark"
               >
                 Submit
               </button>

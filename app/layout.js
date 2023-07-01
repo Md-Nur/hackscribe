@@ -2,9 +2,13 @@
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Athiti } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const athiti = Athiti({
+  subsets: ['latin'],
+  weight: ['400'],
+})
 
 const metadata = {
   title: 'HackScribe - Blog your coding experience',
@@ -18,7 +22,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
       </head>
-      <body className={inter.className}>
+      <body className={`${athiti.className} backgroundImage`}>
         <Navbar />
         {children}
         <Footer />
